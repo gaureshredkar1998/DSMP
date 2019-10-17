@@ -1,0 +1,86 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 196px;
+            height: 159px;
+        }
+        .auto-style3 {
+            height: 159px;
+        }
+        .auto-style4 {
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style4" colspan="2">Welcome Admin</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <br />
+                    <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick">
+                        <Items>
+                            <asp:MenuItem Text="HOME" Value="HOME"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/admin_create_feedback.aspx" Text="CREATE FEEDBACK" Value="CREATE FEEDBACK"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin_register_faculty.aspx" Text="REGISTER FACULTY" Value="REGISTER FACULTY"></asp:MenuItem>
+                            <asp:MenuItem Text="QUETIONNAIRE" Value="QUETIONNAIRE">
+                                <asp:MenuItem Text="SHOW QUESTION" Value="SHOW QUESTION" NavigateUrl="~/admin_show_questions.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Admin_questionnaire.aspx" Text="ADD QUESTION" Value="ADD QUESTION"></asp:MenuItem>
+                                <asp:MenuItem Text="REMOVE QUETION" Value="REMOVE QUETION"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Admin_Report.aspx" Text="REPORT" Value="REPORT"></asp:MenuItem>
+                            <asp:MenuItem Text="DEPARTMENT" Value="DEPARTMENT">
+                                <asp:MenuItem Text=" DEPARTMENT" Value=" DEPARTMENT" NavigateUrl="~/Admin_department.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/admin_class.aspx" Text="CLASS" Value="CLASS"></asp:MenuItem>
+                                <asp:MenuItem Text="DIVISION" Value="DIVISION" NavigateUrl="~/admin_division.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="BATCH" Value="BATCH" NavigateUrl="~/admin_batch.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="SUBJECT" Value="Subject" NavigateUrl="~/Admin_Add_Subject.aspx"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    <br />
+                    <br />
+                &nbsp;</td>
+                <td class="auto-style3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                            <br />
+                        </p>
+                        <p>
+                        </p>
+                        <p>
+                        </p>
+                        <p>
+                        </p>
+                        <p>
+                        </p>
+                        <p>
+                        </p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

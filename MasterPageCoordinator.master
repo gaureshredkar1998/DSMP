@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageCoordinator.master.cs" Inherits="MasterPageCoordinator" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            background-color: #FFFF99;
+        }
+        .auto-style2 {
+            width: 43px;
+            height: 359px;
+        }
+        .auto-style3 {
+            height: 359px;
+        }
+        .auto-style4 {
+            height: 52px;
+            text-align: center;
+            font-size: xx-large;
+        }
+        .auto-style5 {
+            height: 31px;
+        }
+        .auto-style6 {
+            position: absolute;
+            top: 138px;
+            left: 82px;
+            z-index: 1;
+            width: 108px;
+            height: 32px;
+        }
+        .auto-style7 {
+            position: absolute;
+            top: 216px;
+            left: 83px;
+            z-index: 1;
+            width: 184px;
+        }
+        .auto-style8 {
+            position: absolute;
+            top: 285px;
+            left: 82px;
+            z-index: 1;
+        }
+        .auto-style9 {
+            position: absolute;
+            top: 96px;
+            left: 81px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style4" colspan="2"><strong>Welcome to Co-ordinator Login</strong></td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style6" NavigateUrl="~/Co-Ordinator_Add_Faculty.aspx">Add Faculty</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" runat="server" CssClass="auto-style7" NavigateUrl="~/Co-Ordinator_Faculty_Performance.aspx">Faculty Performance</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="auto-style8" NavigateUrl="~/Co-Ordinator_Passkey.aspx">PassKey</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink4" runat="server" CssClass="auto-style9" NavigateUrl="~/Home_Coordinator.aspx">Home</asp:HyperLink>
+                </td>
+                <td class="auto-style3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                            <br />
+                        </p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style5" colspan="2"></td>
+            </tr>
+        </table>
+       
+    </div>
+    </form>
+</body>
+</html>

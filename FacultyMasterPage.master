@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FacultyMasterPage.master.cs" Inherits="FacultyMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 278px;
+        }
+        .auto-style3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style3" colspan="2">Welcome</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">
+                        <asp:Menu ID="Menu1" runat="server">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/faculty_show_report.aspx" Text="Show Report" Value="Show Report"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
+
